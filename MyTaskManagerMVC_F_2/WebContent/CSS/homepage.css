@@ -1,0 +1,258 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	color: #343434;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+img {
+	width: 300px;
+}
+
+a {
+	color: #FFE66D;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #90F39C;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 50px;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 45px;
+}
+
+h1, h2 {
+	font-family: 'Caveat', cursive;
+	font-weight: 400;
+	margin: 0;
+}
+
+.container-wrap {
+	max-width: 800px;
+	width: 85%;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+input[type=text], [type=email] ,[type=password] , select, textarea, [type=submit] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+}
+
+
+
+/* Grid part
+------------------------------------*/
+.item-header {
+	background: #2F3061;
+	width: 100vw;
+	height: 10vh;
+	grid-area: header;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	align-items: top;
+}
+
+.item-menu {
+	grid-area: menu;
+	width: 20vw;
+	height: auto;
+	background-color: #E0E0E0;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-right: 2px solid black;
+}
+
+.item-main {
+	grid-area: main;
+	background-image: url("../Img/joanna-kosinska-unsplash.jpg");
+	background-size: cover;
+	background-position: top right;
+	width: auto;
+	height: auto;
+	padding: 20px 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 100vw;
+	background-position: top right;
+	justify-content: center;
+}
+
+.master {
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	flex-direction: column;	
+	height: 100%;
+}
+
+.master a {
+	color: #2F3061;
+}
+
+.master .btn {
+	color: #F7FFF7;
+	background: linear-gradient(#5c5d9c,#2F3061);
+	background-color: #6668c4;
+    box-shadow: inset 0 1px 1px #898be8;
+    border-color: #18194f #18194f #0c0e6b;
+	text-decoration: none;
+	padding: 8px;
+	border-radius: 4px;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.master .btn:hover {
+	background: rgba(47, 48, 97, 80%);
+}
+
+.intro > h2{
+	display:block;
+	width: auto;
+}
+
+
+.divider{
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255,255,255,.65);
+	border: 1px solid gray;
+	height: 40%;
+	border-radius: 30px;
+}
+
+.register{
+	
+	display: flex;
+	box-sizing:inherit;
+	justify-content: center;
+    align-items: center;
+    text-align: right;
+    flex-wrap : wrap;
+    background-color: rgba(255,255,255,.65);
+	border: 1px solid gray;
+	height: auto;
+	width : 100%;
+	border-radius: 30px;
+	padding: 10px 0px 20px 0px;
+	
+}
+
+.col-25 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.row:after {
+  width : 100%;
+  display: table;
+  clear: both;
+}
+
+
+.item-right {
+	grid-area: right;
+	width: 10vw;
+	height: auto;
+	margin-left: 0px;
+	background-color: #E0E0E0;
+	border-left: 2px solid black;
+}
+
+.item-footer {
+	grid-area: footer;
+	height: 10vh;
+	width: 100vw;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas: 
+	'header header header header header header'
+	'main main main main main main'
+	'main main main main main main'
+	'footer footer footer footer footer footer';
+	width: 100vw;
+	height: 100vh;
+	background-color: #05DFDC;
+	margin: 0px;
+	padding: 0px;
+	align-items: auto;
+	grid-gap: 0px;
+	grid-template-rows: auto 1fr auto;
+}
+
+
+/* Grid end
+------------------------------------*/
+
+/* App name
+------------------------------------*/
+header {
+	color: #F7FFF7;
+	text-align: center;
+}
+
+/* Contact Info
+------------------------------------*/
+footer {
+	background: #343434;
+	color: #F7FFF7;
+	text-align: center;
+}
+
+.contact-list {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.contact-list a {
+	padding: 15px;
+	display: inline-block;
+}
