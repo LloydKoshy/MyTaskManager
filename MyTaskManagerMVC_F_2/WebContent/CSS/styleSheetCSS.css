@@ -112,6 +112,14 @@ input[type=text], [type=email], [type=date], [type=password], select,
 	background: rgba(47, 48, 97, 80%);
 }
 
+.ham {
+	display: none;
+}
+
+.remove {
+	display: none;
+}
+
 .item-menu {
 	grid-area: menu;
 	width: 20vw;
@@ -127,7 +135,7 @@ input[type=text], [type=email], [type=date], [type=password], select,
 	
 }
 
-.menu {
+.menu, .hide{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -318,19 +326,20 @@ tr:nth-child(odd) {
 	align-items: auto;
 	grid-gap: 0px;
 	grid-template-rows: auto 1fr auto;
+	grid-template-columns: auto;
 }
 
 @media all and (max-width : 700px) {
+
 .grid-container {
   display: grid;
   grid-template-areas: 'header'
-		               'menu' 
 		               'main'
 		               'main'
 		               'main'
 		               'footer ';
-  
- grid-template-rows: auto 1fr 3fr auto;
+  grid-auto-rows: minmax(100px, auto)
+ 
 
 }
 
@@ -342,6 +351,14 @@ tr:nth-child(odd) {
 	padding: 0px;
 	margin: 0px 0px 0px 0px;
 	align-items: top;
+}
+
+.ham {
+	display: inline;
+}
+
+.remove {
+	display: inline;
 }
 
 .header-flex-container {
@@ -379,8 +396,14 @@ tr:nth-child(odd) {
 	justify-content: space-around;
 	align-items: center;
 	width: auto;
-	height: auto;
+	height: auto; 
 }
+
+ .hide {
+    display : none
+	height: 0;
+	overflow: hidden;
+} 
 
 .main-heading{
 	display: none;
@@ -393,9 +416,6 @@ tr:nth-child(odd) {
 }
 
 
-
-
-
 .item-footer {
 	grid-area: footer;
 	height: auto;
@@ -406,7 +426,7 @@ tr:nth-child(odd) {
 
 }
 
-@media screen and (max-width:749px){
+@media screen and (max-width:700px){
   h1 {
     font-size: 35px;
     line-height: 1.0;

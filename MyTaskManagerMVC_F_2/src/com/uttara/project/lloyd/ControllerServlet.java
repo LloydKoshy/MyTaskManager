@@ -705,7 +705,6 @@ public class ControllerServlet extends HttpServlet {
 		/*=====================task view end===========================================*/
 
 		if (requri.contains("/createTask.do")) {
-
 			String email = null;
 			String storageMedium = null;
 			String msg = null;
@@ -722,7 +721,7 @@ public class ControllerServlet extends HttpServlet {
 				rd.forward(request, response);
 			} else {
 				System.out.println("cs -> updateCategory ->" + storageMedium);
-				bean = (TaskBean)request.getAttribute("taskBean");	
+				bean = (TaskBean)request.getAttribute("taskBean");	  
 				if (email != null) {
 					if (storageMedium != null) {
 						ModelBL model = new ModelBL();

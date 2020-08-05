@@ -256,3 +256,90 @@ footer {
 	padding: 15px;
 	display: inline-block;
 }
+
+@media all and (max-width : 700px) {
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'header'
+		               'main'
+		               'main'
+		               'main'
+		               'footer ';
+ 
+
+}
+
+.item-header {
+	background: #61506e;
+	width: auto;
+	height: auto;
+	grid-area: header;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	align-items: top;
+}
+
+.header-flex-container {
+	display: flex;
+	flex-grow: inherit;
+	justify-content: space-between;
+	align-items: center;
+	height: auto;
+	width: 100%;
+	padding: 10px;
+}
+
+.head .hBtn {
+	color: #F7FFF7;
+	background: linear-gradient(#5c5d9c, #2F3061);
+	background-color: #6668c4;
+	box-shadow: inset 0 1px 1px #898be8;
+	border-color: #18194f #18194f #0c0e6b;
+	text-decoration: none;
+	padding-left: 8px;
+	padding-right: 8px; 
+	display: inline-block;
+	margin-right: 20px;
+	border-radius: 4px;
+	
+}
+
+.main-heading{
+	display: none;
+}
+
+.item-main{
+	grid-area: main;
+	width: auto;
+	height: auto;
+}
+
+
+
+
+
+.item-footer {
+	grid-area: footer;
+	height: auto;
+	width: auto;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+}
+
+@media screen and (max-width:749px){
+  h1 {
+    font-size: 35px;
+    line-height: 1.0;
+    margin-bottom: 5px;
+  }
+  h2 {
+    font-size: 25px;
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
+}

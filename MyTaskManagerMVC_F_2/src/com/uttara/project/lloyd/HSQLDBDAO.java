@@ -40,7 +40,7 @@ public class HSQLDBDAO implements TaskManagerDAO {
 				logger.log("model -> craetecategory() -> inserting into Category");
 				ps_ins = con.prepareStatement("INSERT INTO CATEGORIES (Name, TM_User_db_id) VALUES (?,?);",
 						Statement.RETURN_GENERATED_KEYS);
-				ps_ins.setString(1, (catName + ".todo"));
+				ps_ins.setString(1, (catName));
 				ps_ins.setString(2, slNo);
 				b = ps_ins.execute();
 				System.out.println(b);
@@ -277,6 +277,7 @@ public class HSQLDBDAO implements TaskManagerDAO {
 				rs = ps_sel.executeQuery();
 				if (rs.next()) {
 					cat_ID = rs.getString("id");
+					System.out.println("cat_id-> "+cat_ID);
 				}
 
 				ps_sel = con.prepareStatement("SELECT * FROM PRIORITY_MASTER WHERE Priority=?");

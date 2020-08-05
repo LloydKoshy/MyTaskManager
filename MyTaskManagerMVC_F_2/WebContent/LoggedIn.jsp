@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -8,6 +9,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="javaScript/time.js" async></script>
+<script
+	src="javaScript/ham.js" async></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
@@ -31,8 +36,10 @@
 					
 					<br />
 					<h2>
+					    <% SimpleDateFormat sdf = new SimpleDateFormat("E, dd MMM yyyy"); %>
 						todays date and time is
-						<%=new Date()%></h2>
+						<%= sdf.format(new Date()) %> <e class="syncTime"> </e></h2>
+						
 					<br />
 					<br /> <!-- onchange="javascript:location.href = this.value;"-->
 					<form action="setStorage.do"  method="get">
