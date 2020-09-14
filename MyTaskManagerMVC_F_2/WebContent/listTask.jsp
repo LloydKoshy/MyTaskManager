@@ -9,8 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="javaScript/ham.js" async></script>
+<script src="javaScript/ham.js" async></script>
+<script src="javaScript/tablesort.js" async></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
@@ -29,22 +29,30 @@
 			<section class="master">
 				<div class="intro">
 					<h1>List of Tasks</h1>
+
+				</div>
+
+
+				<div class="search">
+					<span class="search-inputs"><i class="glyphicon glyphicon-search icon"></i><input class="input-field" type="text" onkeyup="search()" placeholder="Search.."/></span>
 					
 				</div>
+
 				<div class="container-wrap task-list">
+
 					<div>
-						<table border="1">
+						<table id="table" border="1">
 
 							<thead>
 								<tr>
-									<th>Sl_No</th>
-									<th>Task_Name</th>
-									<th>Description</th>
-									<th>Tags</th>
-									<th>Start_Date</th>
-									<th>End_Date</th>
-									<th>Priority</th>
-									<th>Status</th>
+									<th onclick="sortTable(0)">Sl_No</th>
+									<th onclick="sortTable(1)">Task_Name</th>
+									<th onclick="sortTable(2)">Description</th>
+									<th onclick="sortTable(3)">Tags</th>
+									<th onclick="sortTable(4)">Start_Date</th>
+									<th onclick="sortTable(5)">End_Date</th>
+									<th onclick="sortTable(6)">Priority</th>
+									<th onclick="sortTable(7)">Status</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -74,10 +82,10 @@
 
 						</table>
 					</div>
-					</div>
-					<div style="color: red;">
-						<span>${msg}</span>
-					</div>
+				</div>
+				<div style="color: red;">
+					<span>${msg}</span>
+				</div>
 			</section>
 		</div>
 
